@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class NumberRecyclerViewAdapter (var numberList: List<Long>): RecyclerView.Adapter<NumbersViewHolder>() {
+class NumberRecyclerViewAdapter (var numberList: List<Int>): RecyclerView.Adapter<NumbersViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):  NumbersViewHolder {
         var itemView = LayoutInflater .from(parent .context).inflate(R.layout.fibonacci_numbers , parent , false)
         return NumbersViewHolder  (itemView)
@@ -21,6 +21,7 @@ class NumberRecyclerViewAdapter (var numberList: List<Long>): RecyclerView.Adapt
 class NumbersViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
     var tvnumber = itemView.findViewById<TextView>(R.id.tvnumber )
 }
+
 
 
 
